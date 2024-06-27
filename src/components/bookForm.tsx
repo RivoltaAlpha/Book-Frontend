@@ -23,30 +23,30 @@ const BookForm = ({ onSubmit, currentBook }: BookFormProps) => {
 
   return (
     <div className='flex flex-col align-center justify-center'>
-      <h1 className="text-2xl font-bold mb-2">Book Repository</h1>
+      <h1 className="text-2xl font-bold mb-2">Wattpad Space </h1>
       <form onSubmit={handleSubmit} className="space-y-4 ">
         <input
           ref={titleRef}
           placeholder="Title"
           defaultValue={currentBook?.title || ''}
           required
-          className="border p-2 bg-blue-100 rounded-md w-1/4 mt-5 "
+          className="border p-2 bg-blue-100 text-white hover:bg-blue-900 rounded-md w-1/4 mt-5 "
         />
         <input
           ref={authorRef}
           placeholder="Author"
           defaultValue={currentBook?.author || ''}
           required
-          className="border p-2 rounded-md bg-blue-100 w-1/4 mt-10 ml-10"
+          className="border p-2 rounded-md text-white hover:bg-blue-900 bg-blue-100 w-1/4 mt-10 ml-10"
         />
         <input
           ref={yearRef}
           placeholder="Publication Year"
           defaultValue={currentBook?.year ? currentBook.year.toString() : ''}
           required
-          className="border bg-blue-100 p-2 rounded-md w-1/4 mt-10 ml-10"
+          className="border bg-blue-100 p-2 text-white rounded-md hover:bg-blue-900 w-1/4 mt-10 ml-10"
         />
-        <button type="submit" className="bg-blue-500 rounded-md mt-10 text-white p-2 w-1/2">
+        <button type="submit" className="bg-blue-500 hover:bg-blue-900 rounded-md mt-10 text-white p-2 w-1/2">
           {currentBook ? 'Update Book' : 'Add Book'}
         </button>
       </form>
